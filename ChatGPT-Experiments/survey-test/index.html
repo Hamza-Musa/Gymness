@@ -25,10 +25,18 @@
             <label for="exercise-type">What types of exercise do you do?</label>
             <input type="text" id="exercise-type" name="exercise-type" required>
 
+            <label for="fitness-goal">Choose fitness goal:</label>
+            <select name="fitnessGoal" id="fitnessGoal">
+              <option value="muscle">Build Muscle</option>
+              <option value="strength">Build strength</option>
+              <option value="weightLoss">Lose weight</option>
+              <option value="all">Combination of the all the above</option>
+            </select>
+
             <label for="health-conditions">Do you have any pre-existing health conditions?</label>
             <input type="text" id="health-conditions" name="health-conditions" required>
 
-            <input type="submit" value="Submit" onClick="submitForm()">
+            <input type="submit" value="Submit">
         </form>
     </div>
     <script src="fitness-survey.js"></script>

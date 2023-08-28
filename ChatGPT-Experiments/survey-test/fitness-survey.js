@@ -26,18 +26,51 @@ class FitnessSurvey {
   }
 }
 
-/*
+class User {
+  constructor(age, height, weight, daysPerWeek, exerciseType, fitnessGoal, healthConditions) {
+    this.age= age;
+    this.height= height;
+    this.weight= weight;
+    this.daysPerWeek= daysPerWeek;
+    this.exerciseType = exerciseType;
+    this.fitnessGoal = fitnessGoal;
+    this.healthConditions = healthConditions;
 
-let fitnessSurvey = new FitnessSurvey();
-fitnessSurvey.addQuestion("What is your age?", "int");
-fitnessSurvey.addQuestion("What is your height (in inches)?", "int");
-fitnessSurvey.addQuestion("What is your weight (in pounds)?", "int");
-fitnessSurvey.addQuestion("How many days per week do you exercise?", "int");
-fitnessSurvey.addQuestion("What types of exercise do you do?", "string");
-fitnessSurvey.addQuestion(
-  "Do you have any pre-existing health conditions?",
-  "string"
-);
+  }
+}
 
-console.log(fitnessSurvey.collectResponses());
-*/
+
+const user1 = new User(25, 175, 70, 4, 'cardio' );
+const user2 = new User(30, 160, 60, 3, 'strength training');
+console.log(user1);
+console.log(user2);
+
+function createUser(age, height, weight, daysPerWeek, exerciseType){
+
+  return new User(age, height, weight, daysPerWeek, exerciseType);
+}
+
+function processForm(event) {
+  // prevents default behavior 
+  if (event.preventDefault) event.preventDefault();
+  //created a user
+  const user = createUser(
+    event.srcElement[0].value, 
+    event.srcElement[1].value,
+    event.srcElement[2].value,
+    event.srcElement[3].value,
+    event.srcElement[4].value,
+    event.srcElement[5].value,
+    event.srcElement[6].value);
+
+  console.log(user);
+  // You must return false to prevent the default form behavior
+  return false;
+}
+
+var form = document.getElementById('survey-form');
+if (form.attachEvent) {
+  form.attachEvent("submit", processForm);
+} else {
+  form.addEventListener("submit", processForm);
+}
