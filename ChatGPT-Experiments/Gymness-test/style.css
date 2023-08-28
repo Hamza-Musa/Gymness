@@ -139,7 +139,8 @@ main {
 #contact-form input,
 #contact-form textarea {
     width: 100%;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(66, 65, 65);
+    color: white;
     padding: 0.5em;
     border: none;
     border-radius: 5px;
