@@ -1,31 +1,47 @@
-* {
-    background-color: black;
-    color: white;
-           
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Anton';
+    font-style: italic;
 }
+
+h3 {
+    font-size: 53px;
+}
+
 
 #main-page {
     background-image: url('/Users/hamzamusa/Desktop/GymnessLocal/Gymness/GymnessBackground.jpeg');
-    z-index: 1;
     background-size: cover;
     background-position: center;
     margin: 0;
-    /* Remove default margin */
+    font-style: normal;
+    /* Set font style to normal */
     padding: 0;
-    /* Remove default padding */
     overflow-x: hidden;
-    /* Hide horizontal overflow */
-    height: 100%;
-    /* Set height to 100% of viewport height */
+    height: 100vh;
+    position: relative;
 }
 
+h1 {
+        font-style: normal;
+}
 main {
+    position: relative;
+    background-color: black;
+    color: white;
+    /* Make main content appear on top of the background image */
     height: calc(100vh - 60px);
     /* Adjust height of main section (subtracting header height) */
     overflow-y: auto;
     /* Add vertical scroll if content overflows */
 }
 
+h2,h3,h4 {
+    color: yellow;
+}
+
+#section1 h2{
+    font-size: 101px;
+}
 
 #section1 {
     display: flex;
@@ -33,9 +49,11 @@ main {
     justify-content: flex-end;
     align-items: center;
     height: 80vh;
-    /* Set height to 100% of viewport height */
+    /* Set height to 80% of viewport height */
     padding-bottom: 50px;
     /* Adjust bottom padding as needed */
+    position: relative;
+    /* Add position relative */
 }
 
 h2 {
@@ -51,7 +69,7 @@ h2 {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: yellow;
     color: white;
     text-decoration: none;
     border: none;
@@ -64,7 +82,6 @@ button:hover {
     /* Change the hover background color */
 }
 
-
 header {
     float: left;
 }
@@ -74,15 +91,15 @@ h1 {
     font-size: medium;
 }
 
-
-
-
-
 footer {
     background-color: yellow;
     padding: 20px;
     text-align: center;
+    position: relative;
+    z-index: 3;
+    /* Make footer appear on top of main content */
 }
+
 .mailing-addresses {
     display: flex;
     justify-content: flex-end;
