@@ -1,7 +1,12 @@
-
+* {
+    background-color: black;
+    color: white;
+           
+}
 
 #main-page {
     background-image: url('/Users/hamzamusa/Desktop/GymnessLocal/Gymness/GymnessBackground.jpeg');
+    z-index: 1;
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -10,7 +15,7 @@
     /* Remove default padding */
     overflow-x: hidden;
     /* Hide horizontal overflow */
-    height: 100vh;
+    height: 100%;
     /* Set height to 100% of viewport height */
 }
 
@@ -27,7 +32,7 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     /* Set height to 100% of viewport height */
     padding-bottom: 50px;
     /* Adjust bottom padding as needed */
