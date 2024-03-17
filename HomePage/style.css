@@ -1,3 +1,17 @@
+html {
+    background-image: url('/Gymness/HomePage/imgs/GymnessBackground.jpeg');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        font-style: normal;
+        /* Set font style to normal */
+        padding: 0;
+        overflow-x: hidden;
+        height: 100vh;
+        position: relative;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Anton';
     font-style: italic;
@@ -8,18 +22,9 @@ h3 {
 }
 
 
-#main-page {
-    background-image: url('/Gymness/HomePage/imgs/GymnessBackground.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    font-style: normal;
-    /* Set font style to normal */
-    padding: 0;
-    overflow-x: hidden;
-    height: 100vh;
-    position: relative;
-}
+/* #main-page {
+    
+} */
 
 h1 {
         font-style: normal;
